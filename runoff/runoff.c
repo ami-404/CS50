@@ -152,7 +152,7 @@ void tabulate(void)
             if (!candidates[preferences[i][j]].eliminated)
             {
                 candidates[preferences[i][j]].votes++;
-                return;
+                break;
             }
         }        
     }
@@ -169,7 +169,7 @@ bool print_winner(void)
     {
         if (!candidates[i].eliminated && (candidates[i].votes > threshold))
         {
-            printf("%s", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }        
     }
