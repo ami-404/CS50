@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
   }
 
   FILE *card = fopen(argv[1], "r");
-  FILE *out = fopen("out.txt", "w");
+  // FILE *out = fopen("out.txt", "w");
 
   if (card == NULL) {
     printf("failed to open file\n");
