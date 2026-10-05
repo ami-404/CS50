@@ -1,5 +1,5 @@
 token.txt
-test/*
+test/
 libcs50-11.0.3/*
 .venv
 ./week7/movies/movies.db
