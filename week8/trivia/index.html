@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Trivia!</title>
+    <script>
+      // TODO: Add code to check answers to questions
+
+      function checkMcq(content){
+        const mcButtons = document.querySelectorAll(".mcButton")
+        mcButtons.forEach(btn => {
+          btn.style.background = "#d9edff"
+        })
+        if (content.innerText == "New Delhi"){
+          content.style.background = "green";
+          document.getElementById("correctmcq").innerText = "currenct"
+        }else{
+          content.style.background = "red";
+          document.getElementById("correctmcq").innerText = "incurrenct"
+        }
+      }
+
+      function checkContin(){
+        const correctConti = document.getElementById("contiPlace")
+        const freeRes = document.getElementById("continent")
+
+        if (freeRes.value.toLowerCase() == "asia" ){
+          correctConti.innerText = "correct"
+          freeRes.style.background = "green"
+          freeRes.style.color = "white"
+        } else {
+          correctConti.innerText = "incorrect"
+          freeRes.style.background = "red"
+          freeRes.style.color = "white"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>Part 1: Multiple Choice</h2>
+        <hr />
+        <h3>What is your name</h3>
+        <p id="correctmcq"></p>
+        <button class="mcButton" onclick="checkMcq(this)">Gujarat</button>
+        <button class="mcButton" onclick="checkMcq(this)">Nepal</button>
+        <button class="mcButton" onclick="checkMcq(this)">London</button>
+        <button class="mcButton" onclick="checkMcq(this)">New Delhi</button>
+        <!-- TODO: Add multiple choice question here -->
+      </div>
+
+      <div class="section">
+        <h2>Part 2: Free Response</h2>
+        <hr />
+        <h3>Which continent India is in</h3>
+        <p id="contiPlace"></p>
+        <input type="text" name="answer" id="continent" />
+        <button onclick="checkContin()">check answer</button>
+
+        <!-- TODO: Add free response question here -->
+      </div>
+    </div>
+  </body>
+</html>
