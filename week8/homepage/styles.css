@@ -1,0 +1,55 @@
+body {
+  width: 80%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav > ul {
+  list-style: none;
+  gap: 20px;
+}
+
+nav,
+ul {
+  display: flex;
+  text-align: center;
+}
+
+nav{
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (width < 480px){
+  nav {
+    flex-direction: column;
+  }
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+}
+
+main{
+  flex: 1;
+}
+
+footer {
+  /* position: sticky; */
+  text-align: center;
+  bottom: 0;
+}
+
+.productsession  *{
+  display: block;
+  clear: both;
+  flex-direction: row;
+}
+
+.dark-mode {
+  background-color: black !important;
+  color: white !important;
+}
